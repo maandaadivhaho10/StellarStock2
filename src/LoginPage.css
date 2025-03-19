@@ -1,0 +1,51 @@
+.login-page {
+    background-color: #f9f9f9;
+    padding: 80px 20px; /* Increased padding for a more spacious look */
+    text-align: center;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased gap for more space between elements */
+    max-width: 450px; /* Increased max-width for a larger form */
+    margin: 0 auto;
+  }
+  
+  .login-form input {
+    padding: 15px; /* Larger padding for inputs */
+    font-size: 18px; /* Increased font size */
+    border-radius: 8px; /* Larger radius for rounder corners */
+    border: 1px solid #ccc;
+    width: 100%; /* Ensure input takes up full width of form */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+  }
+  
+  .login-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px; /* Larger padding for button */
+    font-size: 18px; /* Increased font size for button */
+    border: none;
+    border-radius: 8px; /* Larger border radius */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error {
+    color: red;
+    font-size: 16px; /* Increased font size for error message */
+    margin-top: 10px; /* Added some space above error message */
+  }
+  
+  /* Optional: Add some styling for the page title */
+  .login-page h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
