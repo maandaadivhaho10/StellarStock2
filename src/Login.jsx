@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import './LoginPage.css';  // Ensure this line is correct
-
+import { useNavigate } from 'react-router-dom';
+import './LoginPage.css';
 
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate(); // Use React Router for navigation
 
   const handleSubmit = (e) => {
     e.preventDefault();
     
     if (email === 'user@example.com' && password === 'password123') {
-      localStorage.setItem('isLoggedIn', 'true');
-      window.location.href = '/'; // Redirect to home after login
+      localStorage.setItem('token', 'mock-token-12345'); // Store a token instead of isLoggedIn
+      navigate('/'); // Redirect to home without reloading
     } else {
       setError('Invalid email or password');
     }

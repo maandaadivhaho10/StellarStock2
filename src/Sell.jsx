@@ -51,7 +51,7 @@ function Sell({ addProduct }) {
           onChange={(e) => setProductDescription(e.target.value)}
         />
         <input
-          type="text"
+          type="number"
           placeholder="Product Price"
           value={productPrice}
           onChange={(e) => setProductPrice(e.target.value)}
