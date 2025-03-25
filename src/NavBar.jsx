@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaHome, FaSignInAlt, FaStore, FaUserPlus, FaShoppingCart } from "react-icons/fa";
 import "./NavBar.css";
 
@@ -7,25 +7,25 @@ function NavBar({ cartItemCount }) {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-brand">
+        <NavLink to="/" className="navbar-brand">
           StellarStock
-        </Link>
+        </NavLink>
         <div className="navbar-links">
-          <Link to="/">
+          <NavLink to="/" className={({ isActive }) => (isActive ? "active-link" : "")}>
             <FaHome /> Home
-          </Link>
-          <Link to="/login">
+          </NavLink>
+          <NavLink to="/login" className={({ isActive }) => (isActive ? "active-link" : "")}>
             <FaSignInAlt /> Login
-          </Link>
-          <Link to="/sell">
+          </NavLink>
+          <NavLink to="/sell" className={({ isActive }) => (isActive ? "active-link" : "")}>
             <FaStore /> Sell on StellarStocks
-          </Link>
-          <Link to="/signup">
+          </NavLink>
+          <NavLink to="/signup" className={({ isActive }) => (isActive ? "active-link" : "")}>
             <FaUserPlus /> Sign Up
-          </Link>
-          <Link to="/cart" className="cart-link">
+          </NavLink>
+          <NavLink to="/cart" className={({ isActive }) => (isActive ? "active-link cart-link" : "cart-link")}>
             <FaShoppingCart /> Cart ({cartItemCount})
-          </Link>
+          </NavLink>
         </div>
       </div>
     </nav>

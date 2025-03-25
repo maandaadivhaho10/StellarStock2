@@ -26,21 +26,17 @@
   text-decoration: none;
   color: white;
   font-size: 18px;
+  transition: color 0.3s ease-in-out;
 }
 
 .navbar-links a:hover {
   color: #007bff;
 }
 
-.logout-btn {
-  background-color: red;
-  color: white;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.logout-btn:hover {
-  background-color: darkred;
+/* Highlight the current page */
+.active-link {
+  font-weight: bold;
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 3px;
 }
