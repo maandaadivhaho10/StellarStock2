@@ -30,14 +30,14 @@ function App() {
     setCartItems(cartItems.filter((_, i) => i !== index));
   };
 
-  const [products, setProducts] = useState([{ id: 1, name: 'Cozy Blackent Jacket', description: 'A sleek and comfortable blackent perfect for both chilly and stylish days.', price: 'R25.00', imageUrl: product1Image },
-    { id: 2, name: 'Wireless Headsets', description: 'Experience superior sound quality and comfort with these noise-canceling wireless headsets.', price: 'R40.00', imageUrl: product2Image },
-    { id: 3, name: 'Comfortable Hoodie', description: 'Stay warm and stylish with this cozy hoodie, perfect for casual outings and relaxation.', price: 'R35.00', imageUrl: product3Image },
-    { id: 4, name: 'Nike Sports Shoes', description: 'Boost your performance with these lightweight and durable Nike sports shoes.', price: 'R50.00', imageUrl: product4Image },
+  const [products, setProducts] = useState([{ id: 1, name: 'Cozy Blackent Jacket', description: 'A sleek and comfortable blackent perfect for both chilly and stylish days.', price: '25.00', imageUrl: product1Image },
+    { id: 2, name: 'Wireless Headsets', description: 'Experience superior sound quality and comfort with these noise-canceling wireless headsets.', price: '40.00', imageUrl: product2Image },
+    { id: 3, name: 'Comfortable Hoodie', description: 'Stay warm and stylish with this cozy hoodie, perfect for casual outings and relaxation.', price: '35.00', imageUrl: product3Image },
+    { id: 4, name: 'Nike Sports Shoes', description: 'Boost your performance with these lightweight and durable Nike sports shoes.', price: '50.00', imageUrl: product4Image },
     { id: 5, name: 'Portable Charger', description: 'A durable Portable Charger, perfect for travel and daily use.', price: 'R25.00', imageUrl: product8Image },
     { id: 6, name: 'Elegant Perfume', description: 'A fragrance that captures elegance, with a long-lasting scent.', price: 'R40.00', imageUrl: product6Image },
-    { id: 7, name: 'Portable Bluetooth Speaker', description: 'Take your music anywhere with this compact and powerful Bluetooth speaker.', price: 'R35.00', imageUrl: product7Image },
-    { id: 8, name: 'Fast Charging Cable', description: 'A durable and fast-charging cable for your devices, built for efficiency.', price: 'R50.00', imageUrl: product5Image },]);
+    { id: 7, name: 'Portable Bluetooth Speaker', description: 'Take your music anywhere with this compact and powerful Bluetooth speaker.', price: '35.00', imageUrl: product7Image },
+    { id: 8, name: 'Fast Charging Cable', description: 'A durable and fast-charging cable for your devices, built for efficiency.', price: '50.00', imageUrl: product5Image },]);
 
 
   const addProduct = (newProduct) => {
