@@ -4,9 +4,9 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import './Payment.css';
 
-const stripePromise = loadStripe('pk_test_51R4l4QHfRZXCihntCfAejyxd6KPuNC5hNiYu9onrHgV5ZHLDkoIhhVCtbPOXTV1mIuSsSBckggDduHFxlPpuBtA2008u8vEoOY'); // Replace with your Stripe public key
+const stripePromise = loadStripe('pk_test_51R4l4QHfRZXCihntCfAejyxd6KPuNC5hNiYu9onrHgV5ZHLDkoIhhVCtbPOXTV1mIuSsSBckggDduHFxlPpuBtA2008u8vEoOY');
 
-function CheckoutForm() {
+function CheckoutForm({ clearCart }) {
   const stripe = useStripe();
   const elements = useElements();
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ function CheckoutForm() {
           name: name,
           email: email,
           address: {
-            postal_code: zip, // ZIP Code
+            postal_code: zip,
           },
         },
       });
@@ -52,6 +52,7 @@ function CheckoutForm() {
         setError(paymentMethodResponse.error.message);
       } else {
         alert('Payment Successful!');
+        clearCart(); // Clear the cart
         navigate('/');
       }
     } catch (err) {
@@ -103,13 +104,13 @@ function CheckoutForm() {
   );
 }
 
-function Payment() {
+function Payment({ clearCart }) {
   return (
     <Elements stripe={stripePromise}>
       <div className="payment-page">
         <h2>Payment Page</h2>
         <p>Enter your card details below.</p>
-        <CheckoutForm />
+        <CheckoutForm clearCart={clearCart} />
       </div>
     </Elements>
   );

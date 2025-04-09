@@ -8,7 +8,6 @@ function Sell({ addProduct }) {
   const [productImage, setProductImage] = useState(null);
   const [error, setError] = useState('');
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -21,22 +20,31 @@ function Sell({ addProduct }) {
       name: productName,
       description: productDescription,
       price: productPrice,
-      imageUrl: URL.createObjectURL(productImage), // Create a URL for the uploaded image
+      imageUrl: URL.createObjectURL(productImage),
+      id: Date.now(),
+      isUserProduct: true
     };
 
-    // Pass the new product to the parent component (Home page)
     addProduct(newProduct);
-
-    // Clear the form fields after submission
+    
+    // Clear form completely after submission
     setProductName('');
-    setProductDescription('');
+    setProductDescription(''); 
     setProductPrice('');
     setProductImage(null);
     setError('');
+    
+    // Show success message
+    alert('Payment successful! Your product has been listed.');
   };
 
   return (
-    <div className="sell-page">
+    <div className="sell-container">
+      <div className="sell-instructions">
+        <h3>Sell Your Product</h3>
+        <p>Fill out the form below to list your item for sale.</p>
+        <p>Your product will appear on the home page after submission.</p>
+      </div>
       <h2>Sell on StellarStock</h2>
       <form onSubmit={handleSubmit} className="sell-form">
         <input

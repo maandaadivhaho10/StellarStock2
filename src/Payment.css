@@ -1,45 +1,49 @@
 .payment-page {
     max-width: 400px;
-    margin: 50px auto;
+    margin: 20px auto;
     padding: 20px;
+    box-sizing: border-box;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-  }
-  
-  .payment-form {
+}
+
+.payment-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-  }
-  
-  .payment-form label {
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.payment-form label {
     font-weight: bold;
     text-align: left;
-  }
-  
-  .payment-form input {
+}
+
+.payment-form input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-  }
-  
-  .card-input {
+    width: 100%;
+}
+
+.card-input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background: white;
-  }
-  
-  .error {
+}
+
+.error {
     color: red;
     font-size: 14px;
-  }
-  
-  .pay-button {
-    padding: 10px 20px;
+}
+
+.pay-button {
+    padding: 12px 24px;
     font-size: 16px;
     color: white;
     background-color: #28a745;
@@ -47,14 +51,18 @@
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
-  }
-  
-  .pay-button:hover {
+    min-width: 44px;
+    min-height: 44px;
+    width: 100%;
+    margin: 1rem 0 0;
+}
+
+.pay-button:hover {
     background-color: #218838;
-  }
-  
-  .pay-button:disabled {
+}
+
+.pay-button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
-  }
+}
   
