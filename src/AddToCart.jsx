@@ -53,7 +53,7 @@ function AddToCart({ cartItems, removeFromCart }) {
 
               return (
                 <div key={index} className="cart-item">
-                  <img src={item.imageUrl} alt={item.name} className="cart-image" />
+                  <img src={item.images[0]} alt={item.name} className="cart-image" />
                   <div className="cart-details">
                     <h3>{item.name}</h3>
                     <p>{item.description}</p>

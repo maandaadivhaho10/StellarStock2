@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { 
   FaHome, 
   FaSignInAlt, 
@@ -13,6 +13,9 @@ import {
 import './NavBar.css';
 
 function NavBar({ cartItemCount }) {
+  const location = useLocation();
+  const isLandingPage = location.pathname === '/';
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -21,14 +24,16 @@ function NavBar({ cartItemCount }) {
         </NavLink>
         
         <div className="navbar-links">
-          <NavLink 
-            to="/" 
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-            end
-          >
-            <FaHome className="nav-icon" /> 
-            <span className="nav-text">Home</span>
-          </NavLink>
+          {!isLandingPage && (
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              end
+            >
+              <FaHome className="nav-icon" /> 
+              <span className="nav-text">Home</span>
+            </NavLink>
+          )}
 
 
 

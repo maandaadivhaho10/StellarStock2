@@ -20,7 +20,9 @@ function Sell({ addProduct }) {
       name: productName,
       description: productDescription,
       price: productPrice,
-      imageUrl: URL.createObjectURL(productImage),
+      images: [URL.createObjectURL(productImage)],
+      category: 'Other',
+      delivery: 'Est. delivery: 5-7 business days',
       id: Date.now(),
       isUserProduct: true
     };
